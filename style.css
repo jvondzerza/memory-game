@@ -17,18 +17,21 @@ body {
 }
 
 body {
+    background-image: url("imgs/background.jpg");
     background-size: cover;
     background-color: papayawhip;
 }
 
 #logo {
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
     top: 0;
     left: 0;
     position: absolute;
-    margin-top: -3rem;
+    margin-top: 1rem;
+    margin-left: 1rem;
     cursor: pointer;
+    border-radius: 50%;
 }
 
 .container {
@@ -46,8 +49,9 @@ body {
 }
 
 h1{
-    color: black;
+    color: papayawhip;
     font-weight: 900;
+    font-size: 40px;
 }
 
 #restart {
@@ -111,7 +115,7 @@ img {
 .card.match {
     cursor: default;
     background: #feb413;
-    animation-name: rubberBand;
+    animation-name: pulse;
     -webkit-backface-visibility: visible !important;
     backface-visibility: visible !important;
     animation-duration: .75s;
@@ -120,10 +124,10 @@ img {
     visibility: visible;
 }
 .card.unmatched {
-    animation-name: pulse;
+    animation-name: shake;
     -webkit-backface-visibility: visible !important;
     backface-visibility: visible !important;
-    animation-duration: .75s;
+    animation-duration: .8s;
     background: #f24d35;
 }
 
@@ -201,7 +205,7 @@ img {
 footer {
     width: 100%;
     text-align: center;
-    color: black;
+    color: papayawhip;
     text-decoration: none;
     font-weight: bold;
 }
@@ -221,53 +225,19 @@ a {
         animation-timing-function: ease-in;
         opacity: 0;
     }
-
     40% {
         transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
         animation-timing-function: ease-in;
     }
-
     60% {
         transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
         opacity: 1;
     }
-
     80% {
         transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
     }
-
     to {
         transform: perspective(400px);
-    }
-}
-
-@keyframes rubberBand {
-    from {
-        transform: scale3d(1, 1, 1);
-    }
-
-    30% {
-        transform: scale3d(1.25, 0.75, 1);
-    }
-
-    40% {
-        transform: scale3d(0.75, 1.25, 1);
-    }
-
-    50% {
-        transform: scale3d(1.15, 0.85, 1);
-    }
-
-    65% {
-        transform: scale3d(.95, 1.05, 1);
-    }
-
-    75% {
-        transform: scale3d(1.05, .95, 1);
-    }
-
-    to {
-        transform: scale3d(1, 1, 1);
     }
 }
 
@@ -275,13 +245,47 @@ a {
     from {
         transform: scale3d(1, 1, 1);
     }
-
     50% {
         transform: scale3d(1.2, 1.2, 1.2);
     }
-
     to {
         transform: scale3d(1, 1, 1);
+    }
+}
+
+@keyframes shake {
+    from {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+    20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+    30% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+    80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+    }
+    90% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+    to {
+        transform: translate(1px, -2px) rotate(-1deg);
     }
 }
 

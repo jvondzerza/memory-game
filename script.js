@@ -106,11 +106,6 @@ function enable(){
 function moveCounter(){
     moves++;
     counter.innerHTML = moves;
-    if (moves === 1) {
-    document.getElementById("moves").innerHTML = "1 move";
-    } else {
-        document.getElementById("moves").innerHTML = `${moves} moves`;
-    }
 }
 
 function congratulations(){
@@ -124,7 +119,6 @@ function congratulations(){
 }
 
 function playAgain(){
-    document.getElementById("moves").innerHTML = "0 moves";
     popup.classList.remove("show");
     startGame();
 }
