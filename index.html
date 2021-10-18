@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Memory Game: Wildlife Theme</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="style.css" rel="stylesheet"/>
+</head>
+<body>
+<img src="imgs/jungle-jam.png" id="logo" class="animate__animated animate__slideInLeft" alt="logo">
+<div class="container">
+    <section class="score-panel">
+        <h1 id="moves"><span class="moves">0</span> moves</h1>
+        <button class="animate__animated animate__jackInTheBox" id="restart">Restart</button>
+    </section>
+
+    <ul class="deck animate__animated animate__fadeIn" id="card-deck">
+        <li class="card" title="elephant">
+            <i><img src="imgs/elephant.png" alt="elephant"></i>
+        </li>
+        <li class="card" title="fox">
+            <img src="imgs/fox.png" alt="fox">
+        </li>
+        <li class="card match" title="giraffe">
+            <img src="imgs/giraffe.png" alt="giraffe">
+        </li>
+        <li class="card" title="sloth" >
+            <img src="imgs/sloth.png" alt="sloth">
+        </li>
+        <li class="card" title="squirrel">
+            <img src="imgs/squirrel.png" alt="squirrel">
+        </li>
+        <li class="card match" title="giraffe">
+            <img src="imgs/giraffe.png" alt="giraffe">
+        </li>
+        <li class="card" title="koala">
+            <img src="imgs/koala.png" alt="koala">
+        </li>
+        <li class="card" title="toucan">
+           <img src="imgs/toucan.png" alt="toucan">
+        </li>
+        <li class="card" title="elephant">
+            <img src="imgs/elephant.png" alt="elephant">
+        </li>
+        <li class="card" title="wild-boar">
+            <img src="imgs/wild-boar.png" alt="wild-boar">
+        </li>
+        <li class="card" title="koala">
+            <img src="imgs/koala.png" alt="koala">
+        </li>
+        <li class="card" title="wild-boar">
+            <img src="imgs/wild-boar.png" alt="wild-boar">
+        </li>
+        <li class="card open show" title="sloth" >
+            <img src="imgs/sloth.png" alt="sloth">
+        </li>
+        <li class="card" title="toucan">
+            <img src="imgs/toucan.png" alt="toucan">
+        </li>
+        <li class="card" title="fox">
+            <img src="imgs/fox.png" alt="fox">
+        </li>
+        <li class="card" title="squirrel">
+            <img src="imgs/squirrel.png" alt="squirrel">
+        </li>
+    </ul>
+
+    <div id="popup" class="overlay">
+        <div class="popup">
+            <h2>Congratulations!</h2>
+            <p class="content-1">You beat the game!</p>
+            <div class="content-2">
+                <p id ="final-result"></p>
+            </div>
+            <button id="play-again">Play again</button>
+        </div>
+    </div>
+
+</div>
+
+<footer class="footer">
+    <div class="footer-div animate__animated">Icons and background vector made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon" id="link-two">www.flaticon.com</a></div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
